@@ -1,0 +1,26 @@
+{
+  "name": "tomrer-drungilas",
+  "version": "1.0.0",
+  "description": "This project is a simply, user-friendly website designed for a carpenter business. The website provides essential information about the carpenter´s services, contact details, and a gallery showcasing previous work.  ## Features ### Services: Detailed description of the carpentry services offered. ### Contact Information: Easy-to-find contact details for inquiries or bookings. ### Gallery: A showcase of completed projects, highlighting the carpenter´s craftsmanship. ## Usage The website is intended for: 1. Potential clients to learn more about services. 2. Viewing completed projects in the gallery for inspiration. 3. Contacting the carpenter for inquiries or bookings.",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "sass src/assets/css/styles.scss dist/assets/css/styles.css",
+  "watch-css": "sass --watch src/assets/css/styles.scss dist/assets/css/styles.css"},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ad-run/tomrer-drungilas.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ad-run/tomrer-drungilas/issues"
+  },
+  "homepage": "https://github.com/ad-run/tomrer-drungilas#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.3"
+  },
+  "devDependencies": {
+    "sass": "^1.83.4"
+  }
+}

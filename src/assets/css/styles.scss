@@ -1,0 +1,44 @@
+// Custom.scss
+// Option B: Include parts of Bootstrap
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+@import 'custom';
+
+
+
+body {
+    padding-top: 0;
+    padding-bottom: 3rem;
+  }
+
+
+  .container-fluid  {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+ 
+  .component-header {
+    color: var(--bs-purple);
+  }
+
+
+.nav-link {
+    color: teal;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover 
+{
+    color: hsl(177, 45%, 52%)!important; 
+}
+
+
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+
+
+@import 'sections/footer';
+@import 'sections/carousel';
