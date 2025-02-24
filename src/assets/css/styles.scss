@@ -3,24 +3,20 @@
 /* GLOBAL STYLES
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
-@import 'custom';
 
+@import 'custom';
 
 
 body {
     padding-top: 0;
     padding-bottom: 3rem;
+    font-family: var(--bs-body-font-family);
   }
 
 
   .container-fluid  {
     padding-left: 0;
     padding-right: 0;
-  }
-
- 
-  .component-header {
-    color: var(--bs-purple);
   }
 
 
@@ -40,5 +36,9 @@ body {
 @import "../../../node_modules/bootstrap/scss/bootstrap.scss";
 
 
-@import 'sections/footer';
-@import 'sections/carousel';
+@import './components/fonts';
+@import './sections/navbar';
+@import './sections/footer';
+@import './sections/carousel';
+@import './sections/tjenester';
+
