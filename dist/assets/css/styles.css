@@ -11851,7 +11851,7 @@ textarea.form-control-lg {
   }
 }
 body {
-  padding-top: 0;
+  padding-top: 3rem;
   padding-bottom: 3rem;
   font-family: var(--bs-body-font-family);
 }
@@ -11861,13 +11861,12 @@ body {
   padding-right: 0;
 }
 
-.nav-link {
-  color: teal;
-  transition: all 0.3s ease;
+img {
+  transition: transform 0.5s ease-in-out;
 }
 
-.nav-link:hover {
-  color: hsl(177, 45%, 52%) !important;
+img:hover {
+  transform: scale(1.1);
 }
 
 /*!
@@ -23725,6 +23724,15 @@ textarea.form-control-lg {
   font-weight: 400;
 }
 
+.nav-link {
+  color: whitesmoke !important;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: hsl(177, 45%, 52%) !important;
+}
+
 footer a {
   color: teal;
   text-decoration: none;
@@ -23817,11 +23825,24 @@ footer a:hover {
 
 .card-rating {
   height: auto;
-  color: rgb(211, 203, 192);
+  color: darkslategrey;
 }
 
 .rating {
   background-color: seagreen;
+}
+
+.kundeomtaler {
+  background-color: seashell;
+}
+
+.gradient-modern {
+  background: linear-gradient(135deg, rgb(211, 203, 192), rgb(213, 226, 238));
+  transition: background 0.8s ease-in-out;
+}
+
+.gradient-modern:hover {
+  background: linear-gradient(135deg, rgb(211, 203, 192), rgb(249, 248, 245));
 }
 
 /*# sourceMappingURL=styles.css.map */

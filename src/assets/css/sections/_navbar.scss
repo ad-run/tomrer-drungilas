@@ -2,3 +2,13 @@
     font-family: var(--logo-font-family)!important;
     font-weight: 400;
 }
+
+.nav-link {
+    color: whitesmoke!important;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover 
+{
+    color: hsl(177, 45%, 52%)!important; 
+}
