@@ -8,6 +8,7 @@
   <link rel="icon" type="image/x-icon" href="../tomrer-drungilas/my-favicon/favicon/favicon.ico">
   <link rel="stylesheet" href="dist/assets/css/styles.css">
 </head>
+
 <div class="alert alert-dark alert-dismissible fade show fixed-bottom mb-0" role="alert" id="cookie-banner">
   We use cookies for a better experience. <a href="#">Learn more</a>.
   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" id="accept-cookies"></button>
@@ -18,57 +19,57 @@
 <header>
   <nav class="navbar navbar-expand-lg bg-dark text-primary fixed-top">
     <div class="container d-flex align-items-end">
-      <a class="navbar-brand" href="index.html">
+      <a class="navbar-brand" href="./index.html">
         <img src="src/assets/img/logo/navbar_logo.svg" height= 40px alt="Logo" 
         class="d-inline-block align-text-bottom">
         <span class="m-2">Tømrer Drungilas</span>
       </a>
-
-
-
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" 
+      data-bs-toggle="collapse" data-bs-target="#navbarText" 
+      aria-controls="navbarText" aria-expanded="false" 
+      aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav me-auto mb-0 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="tjenester.html">Tjenester</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Om oss</a>
+            <a class="nav-link" href="about.html">Om oss</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Hvorfor velge du oss?</a>
+            <a class="nav-link" href="hvorfoross.html">Hvorfor velge du oss?</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Samarbeidspartnerer</a>
+            <a class="nav-link" href="partnere.html">Samarbeidspartnerer</a>
           </li>
         </ul>
-        <a href="#" class="btn btn-secondary">Kontakt oss</a>
+        <a href="kontakt.html" class="btn btn-secondary">Kontakt oss</a>
       </div>
     </div>
   </nav>
 </header>
 
-
-
-
+<!--main -->
 <main>
   <div class="container-fluid">
+    <!--carousel -->
   <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
     <div class="carousel-indicators">
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+        aria-label="Slide 1"></button>
       <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
       <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="src/assets/img/carousel/copyspace-architecture-engineer-desktop.jpg" 
-        width="100%" class="custom-img" alt="">
+        <img src="src/assets/img/carousel/copyspace-architecture-engineer-desktop.jpg" width="100%" class="custom-img"
+          alt="">
         <div class="container">
           <div class="carousel-caption text-white">
             <h1>Fra idea til håndverk</h1>
@@ -78,17 +79,18 @@
         </div>
       </div>
       <div class="carousel-item">
-        <img src="src/assets/img/home/takk.jpg" width="100%" class="custom-img">
+        <img src="src/assets/img/tjenester/eik-skap.png" width="100%" class="custom-img">
         <div class="container">
           <div class="carousel-caption text-white">
-            <h1>Gjør det trygg og enkelt å bygge på eller pusse opp.</h1>
-            <p>Fulloversikt over pris, egen prosjekt leder med profesjonell styring.</p>
+            <h1>Fulloversikt over pris og skreddersydde løsninger.</h1>
+            <p>Ingen skjulte kostnader – vi hjelper deg med å finne den beste løsningen innenfor ditt budsjett. </p>
             <p><a class="btn btn-lg btn-secondary" href="#">Hvorfor velge oss?</a></p>
           </div>
         </div>
       </div>
       <div class="carousel-item">
-       <img src="src/assets/img/carousel/jimmy-nilsson-masth-ohF5oGzMcUY-unsplash.jpg" width= "100%" class="custom-img" alt="">
+        <img src="src/assets/img/carousel/jimmy-nilsson-masth-ohF5oGzMcUY-unsplash.jpg" width="100%" class="custom-img"
+          alt="">
         <div class="container">
           <div class="carousel-caption text-white">
             <h1>"Mål to ganger, kutt én gang."</h1>
@@ -107,114 +109,127 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
-
+</div>
 
   <!-- Marketing messaging and featurettes
   ================================================== -->
   <!-- Wrap the rest of the page in another container to center all the content. -->
 
   <div class="container marketing">
-
-    <!-- Three columns of text below the carousel -->
-    <div class="row">
-      <h1 class="text-center pt-lg-3 pb-lg-5 pb-sm-4">Klar for å starte ditt prosjekt?</h1>
-      <div class="col-lg-4">
-        <img class="bd-placeholder-img rounded-circle" width="140" height="140" 
-        src="src/assets/img/carousel/mark-fletcher-brown-nN5L5GXKFz8-unsplash.jpg"/>
-      
-        <h2 class="fw-normal">Rådgiving og trygghet</h2>
-        <p>Vi veileder deg gjennom hele prossesen, fra ide til ferdigstilt prosjekt.</p>
-        <p><a class="btn btn-primary" href="#">Kom i gang &raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
-      <div class="col-lg-4">
-        <img class="bd-placeholder-img rounded-circle" width="140"height="140" 
-        src="src/assets/img/carousel/fabian-blank-pElSkGRA2NU-unsplash.jpg">
-        <h2 class="fw-normal">Kostnadseffektive løsninger</h2>
-        <p>Vi tilbyr konkuransedyktige priser uten at det går på bekostning av kvalitet.</p>
-        <p><a class="btn btn-primary" href="#">Få prisforslag &raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
-      <div class="col-lg-4">
-        <img class="bd-placeholder-img rounded-circle" width="140" height="140" width="100%" height="100%" 
-        src="src/assets/img/home/smile.jpg">
-        <h2 class="fw-normal">Leveransegaranti </h2>
-        <p>Med solid erfaring og kunnskap leverer vi håndverk av høy kvalitet med  
-          leveransegaranti på alt utført arbeid.</p>
-        <p><a class="btn btn-primary" href="#">Om oss &raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
-    </div><!-- /.row -->
-
-
-    <!-- START THE FEATURETTES -->
-
-    <hr class="featurette-divider">
-
-    <div class="row featurette">
-      <div class="col-md-7">
-        <h2 class="featurette-heading fw-normal lh-1">Totalrenovering av hus: 
-          <span class="text-body-secondary">ting du må vite</span></h2>
-        <p class="lead">Vurderer du å totalrenovere huset? 
-          Hvordan du gjennomfører et vellykket prosjekt? 
-          Ikke gå glipp av rådene for hvordan du sparer penger 
-          og sikrer at prosjektet går som planlagt.  </p>
+    <div class="row row-cols-1 row-cols-md-3 g-4 pt-5 pb-5">
+      <div class="col">
+        <div class="card">
+          <img src="./src/assets/img/tjenester/house-frame.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Renovering, ombygg og tilbygg</h5>
+            <p class="card-text">Vi gjør alle typer oppdrag innen tømrerfag. Byggingen av større konstruksjoner i tre, som
+              hus, tilbygg, garasjer, hytter eller påbygg.</p>
+            <p><a class="btn btn-primary" href="./about.html">Om oss &raquo;</a></p>
+          </div>
+        </div>
       </div>
-      <div class="col-md-5">
-        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" 
-        width="500" height="500" src="src/assets/img/home/hus-renovering.jpg"/>
+      <div class="col">
+        <div class="card">
+          <img src="./src/assets/img/home/oppusing.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Små og store byggeprosjekter.</h5>
+            <p class="card-text">Vi kan produserer innredninger og produkter i tre og lignende materialer. Kan montere
+              vinduer og dører, pusse opp trapper, legge og pusse opp gulv samt også bygge skillevegger innvendig. Jobber
+              med både små og store prosjekter. </p>
+            <p><a class="btn btn-primary" href="#">Få prisforslag &raquo;</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="./src/assets/img/home/smile.jpg" class="card-img-top" alt="smile">
+          <div class="card-body">
+            <h5 class="card-title">Leveransegaranti</h5>
+            <p class="card-text"> Vi leverer håndverk av høy kvalitet med
+              leveransegaranti på alt utført arbeid. Vi veileder deg gjennom hele prossesen, fra ide til ferdigstilt
+              prosjekt.</p>
+            <p><a class="btn btn-primary" href="./about.html">Om oss &raquo;</a></p>
+          </div>
+        </div>
       </div>
     </div>
 
-    <hr class="featurette-divider">
+    
+<!--start kunder omtaler section-->
 
-    <div class="row featurette">
-      <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading fw-normal lh-1">Ombygg & tilbygg <span class="text-body-secondary">Må man søke?</span></h2>
-        <p class="lead">Enkelte ombyggingsprosjekter krever byggetillatelse. 
-          Sjekk når du må søke, og om du kan sende søknaden selv eller må overlate det til fagfolk. 
-          Husk at det er ditt ansvar som huseier å sikre at huset til enhver tid er lovlig bygd og følger regelverket. 
-          Kommunen kan gi deg bøter eller kreve at huset føres tilbake til opprinnelig stand 
-          hvis du mangler nødvendige byggetillatelser.</p>
-      </div>
-      <div class="col-md-5 order-md-1">
-        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" 
-        width="500" height="500" src="src/assets/img/home/hus-pabygg.jpg"/>
+<div class="container-fluid d-flex justify-content-center mt-5 mb-5">
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4">
+
+    <div class="col">
+      <div class="card">
+        <div class="card-body card-rating">
+          <div class="star-rating mb-3">★★★★★</div>
+          <h3 class="card-title">Legge lister</h3>
+          <p class="card-text mb-2">"Fleksibel, punktlig og effektivt arbeid. God kommunikasjon og god pris. Veldig
+            fornøyd med arbeidet som ble utført."</p>
+          <p class="card-title">Trine
+            Flaktveit, 16. des 2024</p>
+        </div>
       </div>
     </div>
-
-    <hr class="featurette-divider">
-
-    <div class="row featurette">
-      <div class="col-md-7">
-        <h2 class="featurette-heading fw-normal lh-1">Skal du pusse opp? <span class="text-body-secondary">Hva det koster?</span></h2>
-        <p class="lead">Prisen for oppussing  vil variere ut ifra hvor stort prosjekt du planlegger. 
-          Dersom du skal utføre totalrenovering vil dette være vesentlig dyrere enn om du kun skal pusse opp overflater. 
-          Prisen for oppussingen vil variere etter hvor stor arealet er,
-          hva slags materialer du bruker og hva du skal pusse opp.</p>
+    <div class="col">
+      <div class="card">
+        <div class="card-body card-rating">
+          <div class="star-rating mb-3">★★★★★</div>
+          <h3 class="card-title">Montere Walls to paint + legge gulv</h3>
+          <p class="card-text mb-2">"Kjempefornøyd med både kommunikasjonen underveis og ferdig resultat! Han jobbet
+            både effektivt å bra, og hadde gode tips underveis!"</p>
+          <p>Susanne
+            Fyllingsdalen, 10. des 2024</p>
+        </div>
       </div>
-      <div class="col-md-5">
-        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" 
-        width="500" height="500"  src="./src/assets/img/home/oppusing.jpg"/>
+    </div>
+    <div class="col">
+      <div class="card">
+        <div class="card-body card-rating">
+          <div class="star-rating mb-3">★★★★★</div>
+
+          <h3 class="card-title">Fikse takbjelker og vegger etter fjerning av vegg</h3>
+          <p class="card-text mb-2">Veldig hyggelig og flink :)</p>
+          <p>Daniel Knarrevik, 17. nov 2024</p>
+        </div>
       </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <div class="card-body card-rating">
+          <div class="star-rating mb-3">★★★★★</div>
+
+          <h3 class="card-title">Oppusing gang</h3>
+          <p class="card-text mb-2">God kommunikasjon og godt håndverk. Oversiktlig og ryddig prosjektering. Løsningsorientert.</p>
+          <p>fornøyd kunde, 17. jan 2025</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
   
-    </div>
-
-    <hr class="featurette-divider">
-
-    <!-- /END THE FEATURETTES -->
-
-  </div><!-- /.container -->
+<!--end kunder omtaler section-->
 
 
+
+
+
+   
+
+<hr class="featurette-divider">
+
+</main>
   <!-- FOOTER -->
   <footer class="container">
     <p class="float-end "><a href="#">Back to top</a></p>
     <p>&copy; 2025 Tømrer Drungilas &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
   </footer>
-</main>
-
-</div>
 
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <script src="cookie.js"></script>
 </body>
+
 </html>
