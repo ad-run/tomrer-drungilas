@@ -11856,17 +11856,12 @@ body {
   font-family: var(--bs-body-font-family);
 }
 
-.container-fluid, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl {
-  padding-left: 0;
-  padding-right: 0;
-}
-
 img {
   transition: transform 0.5s ease-in-out;
 }
 
 img:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 /*!
@@ -23749,15 +23744,14 @@ footer a:hover {
 .carousel {
   margin-bottom: 4rem;
 }
-
-.carousel-caption {
+.carousel .carousel-caption {
   bottom: 3rem;
   z-index: 10;
 }
 
 /* Declare heights because of positioning of img element */
 .carousel-item {
-  height: 32rem;
+  height: 26rem;
 }
 
 .carousel-item::before {
@@ -23770,21 +23764,12 @@ footer a:hover {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-/* MARKETING CONTENT
--------------------------------------------------- */
 /* Featurettes
 ------------------------- */
 .featurette-divider {
   margin: 5rem 0; /* Space out the Bootstrap <hr> more */
 }
 
-/* Thin out the marketing headings */
-/* rtl:begin:remove */
-.featurette-heading {
-  letter-spacing: -0.05rem;
-}
-
-/* rtl:end:remove */
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 @media (min-width: 40em) {
@@ -23798,20 +23783,6 @@ footer a:hover {
     font-size: 50px;
   }
 }
-@media (min-width: 62em) {
-  .featurette-heading {
-    margin-top: 7rem;
-  }
-}
-.custom-spacing {
-  margin-right: 50px;
-  margin-bottom: 0px;
-  vertical-align: text-bottom;
-  padding-bottom: 0px;
-  color: teal;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-}
-
 .custom-img {
   width: 100%;
   height: 100%;
@@ -23819,21 +23790,13 @@ footer a:hover {
 }
 
 /*custom carousel*/
-.star-rating {
-  color: coral;
+.bg-custom-light {
+  background-color: seashell;
 }
 
 .card-rating {
   height: auto;
   color: darkslategrey;
-}
-
-.rating {
-  background-color: seagreen;
-}
-
-.kundeomtaler {
-  background-color: seashell;
 }
 
 @keyframes gradient-shift {

@@ -8,27 +8,18 @@
 
 
 body {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    font-family: var(--bs-body-font-family);
-    
-  }
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  font-family: var(--bs-body-font-family);
+}
 
+img {
+  transition: transform 0.5s ease-in-out;
+}
 
-  .container-fluid  {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-
-  img {
-    transition: transform 0.5s ease-in-out;
-  }
-  
-  img:hover {
-    transform: scale(1.1);
-  }
-
+img:hover {
+  transform: scale(1.05);
+}
 
 // 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
 
