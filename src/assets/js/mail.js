@@ -1,9 +1,7 @@
-import { initializeApp } from "firebase/app";
-import { getDatabase, ref, set, push } from "firebase/database";
-import { getAuth } from "firebase/auth";
-import { getStorage } from "firebase/storage";
 
-// Firebase Configuration
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-app.js";
+import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-database.js";
+
 const firebaseConfig = {
     apiKey: "AIzaSyBPw7hyuWJ1hJMkxoTBQyT93PAJ00q1HHY",
     authDomain: "kontaktform-td.firebaseapp.com",
@@ -17,36 +15,33 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
-const auth = getAuth(app);
-const storage = getStorage(app);
-
-// Database reference
 const kontaktFormDB = ref(database, 'kontaktForm-TD');
 
-// Listen for form submission
 document.getElementById('contactForm').addEventListener('submit', submitForm);
 
 function submitForm(e) {
     e.preventDefault();
-    
+
     var name = getElementValue('name');
     var email = getElementValue('email');
     var message = getElementValue('message');
 
-    console.log(name, email, message);
+  
 
-    // Save data to Firebase
+    // Save data to Firebase Realtime Database
     push(kontaktFormDB, {
         name: name,
         email: email,
         message: message
     });
-
+    // Show Bootstrap Modal
+    const successModal = new bootstrap.Modal(document.getElementById('successModal'));
+    successModal.show();
     // Reset form
     document.getElementById('contactForm').reset();
 }
 
-// Function to get input values
-const getElementValue = (id) => {
+function getElementValue(id) {
     return document.getElementById(id).value;
-};
+}
+

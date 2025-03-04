@@ -1,146 +1,109 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tømrer Drungilas - Kontakt</title>
-    
-    <link rel="icon" type="image/x-icon" href="../tomrer-drungilas/my-favicon/favicon/favicon.ico">
-    <link rel="stylesheet" href="dist/assets/css/styles.css">
-    <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-app.js";
-        import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-database.js";
-      
-        const firebaseConfig = {
-            apiKey: "AIzaSyBPw7hyuWJ1hJMkxoTBQyT93PAJ00q1HHY",
-            authDomain: "kontaktform-td.firebaseapp.com",
-            databaseURL: "https://kontaktform-td-default-rtdb.firebaseio.com",
-            projectId: "kontaktform-td",
-            storageBucket: "kontaktform-td.appspot.com",
-            messagingSenderId: "340704782949",
-            appId: "1:340704782949:web:5fc2c1e5f564ae36b4748c"
-        };
-      
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const database = getDatabase(app);
-        const kontaktFormDB = ref(database, 'kontaktForm-TD');
-      
-        document.getElementById('contactForm').addEventListener('submit', submitForm);
-      
-        function submitForm(e) {
-            e.preventDefault();
-            
-            var name = getElementValue('name');
-            var email = getElementValue('email');
-            var message = getElementValue('message');
-      
-            console.log(name, email, message);
-      
-            // Save data to Firebase Realtime Database
-            push(kontaktFormDB, {
-                name: name,
-                email: email,
-                message: message
-            });
-         // Show Bootstrap Modal
-         const successModal = new bootstrap.Modal(document.getElementById('successModal'));
-      successModal.show();
-            // Reset form
-            document.getElementById('contactForm').reset();
-        }
-      
-        function getElementValue(id) {
-            return document.getElementById(id).value;
-        }
+<html lang="no">
 
-      </script>
-      
- 
-</head>
-<body data-bs-theme="dark">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description"
+            content="Tømrer Drungilas - fra idé til håndverk. Håndverkertjeneste for deg som vil ha høy kvalitet, små og store byggeprosjekter. Bygge på eller pusse opp.">
+        <title>Tømrer Drungilas - Kontakt</title>
+        <link rel="icon" type="image/x-icon" href="/tomrer-drungilas/my-favicon/favicon/favicon.ico">
+        <link rel="stylesheet" href="dist/assets/css/styles.css">
+        <script defer type="module" src="src/assets/js/mail.js"></script>
+    </head>
+
+    <body data-bs-theme="dark">
+
+<!-- ** Start Bootstrap Navbar -->
+
+        <header>
+            <nav class="navbar navbar-expand-lg bg-dark text-primary fixed-top">
+                <div class="container d-flex align-items-end">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="src/assets/img/logo/navbar_logo.svg" height=40px alt="Logo"
+                            class="d-inline-block align-text-bottom">
+                        <span class="m-2">Tømrer Drungilas</span>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+        
+                    <div class="collapse navbar-collapse" id="navbarText">
+                        <ul class="navbar-nav me-auto mb-0 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="tjenester.html">Tjenester</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">Om oss</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="hvorfoross.html">Hvorfor velge du oss?</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="partnere.html">Samarbeidspartnerer</a>
+                            </li>
+                        </ul>
+                        <a href="kontakt.html" class="btn btn-secondary active">Kontakt oss</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+<!-- ** End Bootstrap Navbar -->
+
+        <main class="container mt-5 pt-5">
+            <h1>Kontakt oss</h1>
+            <form id="contactForm" autocomplete="on">
+
+                <div class="mb-3">
+                    <label for="name" class="form-label" autocomplete="on">Navn</label>
+                    <input type="text" class="form-control" id="name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label" autocomplete="on">E-post</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label" autocomplete="on">Melding</label>
+                    <textarea class="form-control" id="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send</button>
+            </form>
 
 
-    <header>
-        <nav class="navbar navbar-expand-lg bg-dark text-primary fixed-top">
-            <div class="container d-flex align-items-end">
-                <a class="navbar-brand" href="index.html">
-                    <img src="src/assets/img/logo/navbar_logo.svg" height=40px alt="Logo" class="d-inline-block align-text-bottom">
-                    <span class="m-2">Tømrer Drungilas</span>
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+            <!-- **Bootstrap Modal (Success Message) -->
 
-                <div class="collapse navbar-collapse" id="navbarText">
-                    <ul class="navbar-nav me-auto mb-0 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="tjenester.html">Tjenester</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">Om oss</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="hvorfoross.html">Hvorfor velge du oss?</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="partnere.html">Samarbeidspartnerer</a>
-                        </li>
-                    </ul>
-                    <a href="kontakt.html" class="btn btn-secondary active">Kontakt oss</a>
+            <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content text-center">
+                        <div class="modal-header bg-success text-white">
+                            <h5 class="modal-title"> Meldingen er sendt! 😊 </h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Lukk"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Tusen takk! Vi har mottatt meldingen din og tar kontakt snart. </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-success w-100" data-bs-dismiss="modal">Lukk</button>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </nav>
-    </header>
 
-    <main class="container mt-5 pt-5">
-        <h1>Kontakt oss</h1>
-        <form id="contactForm" autocomplete="on">
-     
-            <div class="mb-3">
-                <label for="name" class="form-label" autocomplete="on">Navn</label>
-                <input type="text" class="form-control" id="name" required>
-            </div>
-            <div class="mb-3">
-                <label for="email" class="form-label" autocomplete="ON">E-post</label>
-                <input type="email" class="form-control" id="email" required>
-            </div>
-            <div class="mb-3">
-                <label for="message" class="form-label" autocomplete="ON">Melding</label>
-                <textarea class="form-control" id="message" rows="4" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Send</button>
-        </form>
+            <!-- ** End main -->
+        </main>
 
-        
-<!-- Bootstrap Modal (Success Message) -->
-<div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content text-center">
-        <div class="modal-header bg-success text-white">
-          <h5 class="modal-title">✅ Melding sendt!</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Lukk"></button>
-        </div>
-        <div class="modal-body">
-          <p>Vi har mottatt meldingen din og tar kontakt snart. 😊</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-success w-100" data-bs-dismiss="modal">Lukk</button>
-        </div>
-      </div>
-    </div>
-  </div>
-    </main>
+        <footer class="bg-dark text-white text-center py-3 mt-5">
+            <p>&copy; 2023 Tømrer Drungilas. All rights reserved.</p>
+        </footer>
 
-    <footer class="bg-dark text-white text-center py-3 mt-5">
-        <p>&copy; 2023 Tømrer Drungilas. All rights reserved.</p>
-    </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
-    <script type="module" src="./src/assets/js/mail.js"></script>
-</body>
-</html></div></li></a></body></html>
+        <!-- ** <script type="module" src="./src/assets/js/mail.js"></script> -->
+    </body>
+
+    </html>
