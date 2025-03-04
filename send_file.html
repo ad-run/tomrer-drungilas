@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Form with Firebase</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script type="module">
+        // Firebase SDK
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-app.js";
+        import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-firestore.js";
+        import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-storage.js";
+
+        // Firebase Config (Replace with your credentials)
+        const firebaseConfig = {
+            apiKey: "YOUR_API_KEY",
+            authDomain: "YOUR_PROJECT.firebaseapp.com",
+            projectId: "YOUR_PROJECT_ID",
+            storageBucket: "YOUR_PROJECT.appspot.com",
+            messagingSenderId: "YOUR_SENDER_ID",
+            appId: "YOUR_APP_ID"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+        const storage = getStorage(app);
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById("dataForm");
+            form.addEventListener("submit", async (e) => {
+                e.preventDefault();
+
+                let name = document.getElementById("name").value;
+                let category = document.getElementById("category").value;
+                let file = document.getElementById("file").files[0];
+
+                let fileUrl = "";
+                if (file) {
+                    const storageRef = ref(storage, `uploads/${file.name}`);
+                    await uploadBytes(storageRef, file);
+                    fileUrl = await getDownloadURL(storageRef);
+                }
+
+                await addDoc(collection(db, "submissions"), {
+                    name: name,
+                    category: category,
+                    fileUrl: fileUrl,
+                    timestamp: new Date()
+                });
+
+                alert("Form submitted successfully!");
+                form.reset();
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Submit Data</h2>
+        <form id="dataForm">
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="mb-3">
+                <label for="category" class="form-label">Category</label>
+                <select class="form-select" id="category" required>
+                    <option value="A">Category A</option>
+                    <option value="B">Category B</option>
+                    <option value="C">Category C</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="file" class="form-label">Upload File</label>
+                <input type="file" class="form-control" id="file">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
+<!--
+It sounds like you need a simple yet flexible backend to store form data, including text inputs, file uploads, and category selections, while keeping your front-end built with Bootstrap.
+
+Recommended Approach: Firebase Firestore & Firebase Storage
+Firebase Firestore is a good choice for a simple and scalable database, while Firebase Storage can handle file uploads. It also integrates well with GitHub-hosted sites.
+
+Steps to Implement:
+Set Up Firebase
+
+Create a Firebase project at Firebase Console.
+Enable Firestore Database for structured data storage.
+Enable Firebase Storage for file uploads.
+Get your Firebase config and include it in your web project.
+Design Your Form in Bootstrap
+
+Use Bootstrap's form elements for text fields, file inputs, and category selection.
+Add a submit button.
+Connect the Form to Firebase
+
+Use Firebase SDK (JavaScript) to handle form submissions.
+Store text data in Firestore.
+Upload files to Firebase Storage and save their URLs in Firestore.
+Deploy on GitHub & Future Hosting
+
+Keep using GitHub Pages for now.
+When moving to Domeneshop Web-Light, check if it supports Firebase 
+(it likely will since Firebase works with static hosting).-->

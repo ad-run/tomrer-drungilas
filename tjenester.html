@@ -7,6 +7,8 @@
    
     <link rel="icon" type="image/x-icon" href="../tomrer-drungilas/my-favicon/favicon/favicon.ico">
     <link rel="stylesheet" href="dist/assets/css/styles.css">
+
+    <script defer src="src/assets/js/breadcrumb.js"></script> 
   </head>
 
   
@@ -58,16 +60,98 @@
     <div class="row">
       <div class="col-lg-6 text-black">
         <h1 class="display-2 mt-5">Få jobben gjort!</h1>
-     
-          <form class="mt-4">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item active" id="breadcrumb-step-1">Beskrivelse</li>
+            <li class="breadcrumb-item" id="breadcrumb-step-2">Kontaktinfo</li>
+            <li class="breadcrumb-item" id="breadcrumb-step-3">Fullført</li>
+          </ol>
+        </nav>
+        <form class="mt-2" id="multiStepForm">
+  <!-- ** Step 1 -->
+
+          <div id="step-1" class="form-step">
             <div class="mb-4">
-              <label for="description" class="form-label mb-3">Beskriv jobben og motta tilbud. Gratis og uforpliktende.</label>
-              <textarea class="form-control" id="description" rows="8" placeholder="Hva trenger du hjelp med?"></textarea>
+              <label for="overskrift" class="form-label mb-3">Beskriv jobben og motta tilbud. Gratis og
+                uforpliktende.</label>
+              <textarea class="form-control" id="overskrift" rows="1" placeholder="Overskrift"></textarea>
             </div>
-         
-            <button type="submit" class="btn btn-primary btn-lg mt-3">Submit</button>
-          </form>
-  </div>
+            <div class="mb-2">
+              <label for="description" class="form-label mb-3">"Hva trenger du hjelp til?"</label>
+              <textarea class="form-control" id="description" rows="6" placeholder="Beskrivelse"></textarea>
+            </div>
+            <div class="mb-2">
+              <label for="exampleDataList" class="form-label">Velg kategori</label>
+              <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
+              <datalist id="datalistOptions">
+                <option value="Oppusing"></option>
+                <option value="Kjøkken"></option>
+                <option value="Vindu"></option>
+                <option value="Fasade"></option>
+                <option value="Tak"></option>
+                <option value="Totalrenovering"></option>
+                <option value="Nybygg"></option>
+                <option value="Terrasse/Trapper"></option>
+                <option value="Bad"></option>
+                <option value="Dør"></option>
+                <option value="Kjeller"></option>
+                <option value="Bygging av vegger"></option>
+                <option value="Utvendig kledning"></option>
+                <option value="Bærekonstruksjon"></option>
+                <option value="Taktekking"></option>
+                <option value="Takvinduer"></option>
+                <option value="Innvendig kledning"></option>
+                <option value="Listverk"></option>
+                <option value="Golv"></option>
+                <option value="Terrasse"></option>
+                <option value="Våtrom"></option>
+                <option value="Anna/Diverse"></option>
+              </datalist>
+            </div>
+          
+            <button id="nextStep2" type="button" class="btn btn-primary btn-lg mt-3">Neste</button>
+
+          </div>
+
+          <!-- ** Step 2 -->
+          <div id="step-2" class="form-step d-none">
+            <div class="mb-2">
+              <label for="email" class="form-label">E-post</label>
+              <input type="email" class="form-control" id="email" placeholder="E-post" required>
+            </div>
+            <div class="mb-2">
+              <label for="phone" class="form-label">Telefonnummer</label>
+              <input type="tel" class="form-control" id="phone" placeholder="+47 Telefonnummer" required>
+            </div>
+            <div class="mb-2">
+              <label for="firstName" class="form-label">Fornavn</label>
+              <input type="text" class="form-control" id="firstName" placeholder="Fornavn" required>
+            </div>
+            <div class="mb-2">
+              <label for="lastName" class="form-label">Etternavn</label>
+              <input type="text" class="form-control" id="lastName" placeholder="Etternavn" required>
+            </div>
+            <div class="mb-2">
+              <label for="address" class="form-label">Adresse</label>
+              <input type="text" class="form-control" id="address" placeholder="Adresse" required>
+            </div>
+            <div class="mb-2">
+              <label for="zipCode" class="form-label">Postnummer</label>
+              <input type="text" class="form-control" id="zipCode" placeholder="Postnummer" required>
+            </div>
+        
+            <button id="submitForm" type="submit" class="btn btn-primary btn-lg mt-3">Fullfør</button>
+          </div>
+
+          <!--  ** Step 3-->
+
+          <div id="step-3" class="form-step d-none">
+            <h2>Takk for foresporsel!  Jobben er sendt til godkjening!</h2>
+            <p>Din forespørsel er mottatt. Vi vil ta kontakt med deg snart.</p>
+            <button id="resetFormBtn" type="button" class="btn btn-secondary btn-lg mt-3">Start på nytt</button>
+          </div>
+        </form>
+      </div>
   <div class="col-lg-6 pt-5">
     <img src="src/assets/img/home/smile.jpg" class="img-fluid rounded img-thumbnail" alt="Responsive image">
   </div>
