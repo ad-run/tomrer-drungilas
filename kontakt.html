@@ -43,7 +43,9 @@
                 email: email,
                 message: message
             });
-      
+         // Show Bootstrap Modal
+         const successModal = new bootstrap.Modal(document.getElementById('successModal'));
+      successModal.show();
             // Reset form
             document.getElementById('contactForm').reset();
         }
@@ -51,6 +53,7 @@
         function getElementValue(id) {
             return document.getElementById(id).value;
         }
+
       </script>
       
  
@@ -96,6 +99,7 @@
     <main class="container mt-5 pt-5">
         <h1>Kontakt oss</h1>
         <form id="contactForm" autocomplete="on">
+     
             <div class="mb-3">
                 <label for="name" class="form-label" autocomplete="on">Navn</label>
                 <input type="text" class="form-control" id="name" required>
@@ -110,6 +114,25 @@
             </div>
             <button type="submit" class="btn btn-primary">Send</button>
         </form>
+
+        
+<!-- Bootstrap Modal (Success Message) -->
+<div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content text-center">
+        <div class="modal-header bg-success text-white">
+          <h5 class="modal-title">✅ Melding sendt!</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Lukk"></button>
+        </div>
+        <div class="modal-body">
+          <p>Vi har mottatt meldingen din og tar kontakt snart. 😊</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success w-100" data-bs-dismiss="modal">Lukk</button>
+        </div>
+      </div>
+    </div>
+  </div>
     </main>
 
     <footer class="bg-dark text-white text-center py-3 mt-5">
