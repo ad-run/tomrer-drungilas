@@ -1,0 +1,25 @@
+# Node.js
+node_modules/
+package-lock.json
+
+# Logs
+*.log
+
+# Environment files
+.env
+
+# Build output
+/dist
+/build
+
+# IDEs or Editors (optional, based on your IDE)
+.vscode/
+.idea/
+*.swp
+
+# OS-generated files (optional, for example on macOS or Windows)
+.DS_Store
+Thumbs.db
+
+
+reCapcha-demo/
