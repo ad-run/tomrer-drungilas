@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="no">
   <head>
     <meta charset="UTF-8" />
@@ -8,17 +8,11 @@
       content="Tømrer Drungilas - fra idé til håndverk. Håndverkertjeneste for deg som vil ha høy kvalitet, små og store byggeprosjekter. Bygge på eller pusse opp."
     />
     <title>Tømrer Drungilas - Kontakt</title>
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="/tomrer-drungilas/my-favicon/favicon/favicon.ico"
-    />
+    <base href="/github.com/ad-run/tomrer-drungilas/">
+    <link rel="icon" type="image/x-icon" href="./my-favicon/favicon/favicon.ico"/>
 
-
-    <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuid.min.js"></script>
+    <!-- Scripts -->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
-    
   </head>
 
   <body data-bs-theme="dark">
@@ -58,17 +52,13 @@
                 <a class="nav-link" href="about.html">Om oss</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="hvorfoross.html"
-                  >Hvorfor velge du oss?</a
-                >
+                <a class="nav-link" href="hvorfoross.html">Hvorfor velge du oss?</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="partnere.html">Samarbeidspartnerer</a>
               </li>
             </ul>
-            <a href="kontakt.html" class="btn btn-secondary active"
-              >Kontakt oss</a
-            >
+            <a href="kontakt.html" class="btn btn-secondary active">Kontakt oss</a>
           </div>
         </div>
       </nav>
@@ -104,16 +94,14 @@
             maxlength="500"
           ></textarea>
         </div>
-        <!-- reCAPTCHA v2 widget--> 
         <div id="recaptcha-container">
           <div class="g-recaptcha" data-sitekey="6LdKK_MqAAAAAEKN6NQzabsjDmo_-PdzPm_tn5qR"></div>
-          <p id="recaptcha-loading" style="display:none;">Loading reCAPTCHA...</p> </div>
-        
+          <p id="recaptcha-loading" style="display:none;">Loading reCAPTCHA...</p>
+        </div>
         <script>
           const recaptchaContainer = document.getElementById('recaptcha-container');
           const recaptchaLoading = document.getElementById('recaptcha-loading');
           recaptchaLoading.style.display = 'block'; //Show loading message
-        
           grecaptcha.ready(function() {
             recaptchaLoading.style.display = 'none'; // Hide loading message once loaded
           });
@@ -122,6 +110,7 @@
         <button type="submit" class="btn btn-primary">Send</button>
       </form>
 
+      <!-- Success Modal -->
       <div
         class="modal fade"
         id="successModal"
@@ -140,9 +129,7 @@
               ></button>
             </div>
             <div class="modal-body">
-              <p>
-                Tusen takk! Vi har mottatt meldingen din og tar kontakt snart.
-              </p>
+              <p>Tusen takk! Vi har mottatt meldingen din og tar kontakt snart.</p>
             </div>
             <div class="modal-footer">
               <button
@@ -161,7 +148,8 @@
     <footer class="bg-dark text-white text-center py-3 mt-5">
       <p>&copy; 2023 Tømrer Drungilas. All rights reserved.</p>
     </footer>
-  
+
+    <!-- Bootstrap JS and custom scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="src/assets/js/mail.js" type="module"></script>
   </body>
