@@ -4,8 +4,7 @@
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
 
-@import 'custom';
-
+@import "custom";
 
 body {
   padding-top: 3rem;
@@ -25,12 +24,9 @@ img:hover {
 
 @import "../../../node_modules/bootstrap/scss/bootstrap.scss";
 
-
-@import './components/fonts';
-@import './sections/navbar';
-@import './sections/footer';
-@import './sections/carousel';
-@import './sections/tjenester';
-@import './sections/testimonials';
-
-
+@import "./components/fonts";
+@import "./sections/navbar";
+@import "./sections/footer";
+@import "./sections/carousel";
+@import "./sections/tjenester";
+@import "./sections/testimonials";

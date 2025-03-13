@@ -1,17 +1,17 @@
-@mixin btn (
-    $bg-color: $secondary,
-    $color: $white,
-    $border: 1px solid $secondary,
-    $hover-bg-color: $primary-dark,
-    $hover-color: $white,
-    $hover-border: 1px solid $secondary-dark
-    ) {
-    background-color: $bg-color;
-    color: $color;
-    border: $border;
-    &:hover {
-        background-color: $hover-bg-color;
-        color: $hover-color;
-        border: $hover-border;
-    }
+@mixin btn(
+  $bg-color: $secondary,
+  $color: $white,
+  $border: 1px solid $secondary,
+  $hover-bg-color: $primary-dark,
+  $hover-color: $white,
+  $hover-border: 1px solid $secondary-dark
+) {
+  background-color: $bg-color;
+  color: $color;
+  border: $border;
+  &:hover {
+    background-color: $hover-bg-color;
+    color: $hover-color;
+    border: $hover-border;
+  }
 }

@@ -1,286 +1,370 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tømrer Drungilas - tjenester</title>
-    <meta name="description" content="Tømrer Drungilas - fra idé til håndverk. Håndverkertjeneste for deg som vil ha høy kvalitet, små og store byggeprosjekter. Bygge på eller pusse opp.">
-    <link rel="icon" type="image/x-icon" href="../tomrer-drungilas/my-favicon/favicon/favicon.ico">
-    <link rel="stylesheet" href="dist/assets/css/styles.css">
-    
+    <meta
+      name="description"
+      content="Tømrer Drungilas - fra idé til håndverk. Håndverkertjeneste for deg som vil ha høy kvalitet, små og store byggeprosjekter. Bygge på eller pusse opp."
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../tømrer-drungilas/my-favicon/favicon/favicon.ico"
+    />
+    <link rel="stylesheet" href="dist/assets/css/styles.css" />
   </head>
 
-  
   <body data-bs-theme="dark">
-   
-  <header class="mb-2">
-    <nav class="navbar navbar-expand-lg bg-dark text-primary fixed-top">
-      <div class="container d-flex align-items-end">
-        <a class="navbar-brand" href="./index.html">
-          <img src="src/assets/img/logo/navbar_logo.svg" height= 40px alt="Logo" 
-          class="d-inline-block align-text-bottom">
-          <span class="m-2">Tømrer Drungilas</span>
-        </a>
-        <button class="navbar-toggler" type="button" 
-        data-bs-toggle="collapse" data-bs-target="#navbarText" 
-        aria-controls="navbarText" aria-expanded="false" 
-        aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-  
-        <div class="collapse navbar-collapse" id="navbarText">
-          <ul class="navbar-nav me-auto mb-0 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="tjenester.html">Tjenester</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">Om oss</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="hvorfoross.html">Hvorfor velge du oss?</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="partnere.html">Samarbeidspartnerer</a>
-            </li>
-          </ul>
-          <a href="kontakt.html" class="btn btn-secondary">Kontakt oss</a>
+    <header class="mb-2">
+      <nav class="navbar navbar-expand-lg bg-dark text-primary fixed-top">
+        <div class="container d-flex align-items-end">
+          <a class="navbar-brand" href="./index.html">
+            <img
+              src="src/assets/img/logo/navbar_logo.svg"
+              height="40px"
+              alt="Logo"
+              class="d-inline-block align-text-bottom"
+            />
+            <span class="m-2">Tømrer Drungilas</span>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarText"
+            aria-controls="navbarText"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav me-auto mb-0 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="tjenester.html">Tjenester</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">Om oss</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="hvorfoross.html"
+                  >Hvorfor velge oss?</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="partnere.html">Samarbeidspartnere</a>
+              </li>
+            </ul>
+            <a href="kontakt.html" class="btn btn-secondary">Kontakt oss</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main
+      class="container-fluid bg-body-tertiary my-5 pb-5"
+      data-bs-theme="light"
+    >
+      <div class="container">
+        <div class="row">
+          <!-- ** Start form -->
+          <div class="col-lg-6 text-black">
+            <h1 class="display-2 mt-5">Få jobben gjort!</h1>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item active" id="breadcrumb-step-1">
+                  Beskrivelse
+                </li>
+                <li class="breadcrumb-item" id="breadcrumb-step-2">
+                  Kontaktinfo
+                </li>
+                <li class="breadcrumb-item" id="breadcrumb-step-3">Fullført</li>
+              </ol>
+            </nav>
+            <!-- ** Form content-->
+            <form class="mt-2" id="multiStepForm">
+              <!-- ** Step 1 -->
+              <div id="step-1" class="form-step">
+                <div class="mb-4">
+                  <label for="overskrift" class="form-label mb-3"
+                    >Beskriv jobben</label
+                  >
+                  <textarea
+                    class="form-control"
+                    id="overskrift"
+                    rows="1"
+                    placeholder="Overskrift"
+                  ></textarea>
+                </div>
+                <div class="mb-2">
+                  <label for="description" class="form-label mb-3"
+                    >Hva trenger du hjelp til?</label
+                  >
+                  <textarea
+                    class="form-control"
+                    id="description"
+                    rows="6"
+                    placeholder="Beskrivelse"
+                  ></textarea>
+                </div>
+                <div class="mb-2">
+                  <label for="exampleDataList" class="form-label"
+                    >Velg kategori</label
+                  >
+                  <input
+                    class="form-control"
+                    list="datalistOptions"
+                    id="exampleDataList"
+                    placeholder="Type to search..."
+                  />
+                  <datalist id="datalistOptions">
+                    <option value="Oppussing"></option>
+                    <option value="Kjøkken"></option>
+                    <option value="Vindu"></option>
+                    <option value="Fasade"></option>
+                    <option value="Tak"></option>
+                    <option value="Totalrenovering"></option>
+                    <option value="Nybygg"></option>
+                    <option value="Terrasse/Trapper"></option>
+                    <option value="Bad"></option>
+                    <option value="Dør"></option>
+                    <option value="Kjeller"></option>
+                    <option value="Bygging av vegger"></option>
+                    <option value="Utvendig kledning"></option>
+                    <option value="Bærekonstruksjon"></option>
+                    <option value="Taktekking"></option>
+                    <option value="Takvinduer"></option>
+                    <option value="Innvendig kledning"></option>
+                    <option value="Listverk"></option>
+                    <option value="Gulv"></option>
+                    <option value="Terrasse"></option>
+                    <option value="Våtrom"></option>
+                    <option value="Anna/Diverse"></option>
+                  </datalist>
+                </div>
+                <button
+                  id="nextStep2"
+                  type="button"
+                  class="btn btn-primary btn-lg mt-3"
+                >
+                  Neste
+                </button>
+              </div>
+
+              <!-- ** Step 2 -->
+              <div id="step-2" class="form-step d-none">
+                <div class="mb-2">
+                  <label for="email" class="form-label">E-post</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="E-post"
+                    required
+                  />
+                </div>
+                <div class="mb-2">
+                  <label for="phone" class="form-label">Telefonnummer</label>
+                  <input
+                    type="tel"
+                    class="form-control"
+                    id="phone"
+                    placeholder="+47 Telefonnummer"
+                    required
+                  />
+                </div>
+                <div class="mb-2">
+                  <label for="firstName" class="form-label">Fornavn</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="firstName"
+                    placeholder="Fornavn"
+                    required
+                  />
+                </div>
+                <div class="mb-2">
+                  <label for="lastName" class="form-label">Etternavn</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="lastName"
+                    placeholder="Etternavn"
+                    required
+                  />
+                </div>
+                <div class="mb-2">
+                  <label for="address" class="form-label">Adresse</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="address"
+                    placeholder="Adresse"
+                    required
+                  />
+                </div>
+                <div class="mb-2">
+                  <label for="zipCode" class="form-label">Postnummer</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="zipCode"
+                    placeholder="Postnummer"
+                    required
+                  />
+                </div>
+
+                <button
+                  id="submitForm"
+                  type="submit"
+                  class="btn btn-primary btn-lg mt-3"
+                >
+                  Fullfør
+                </button>
+              </div>
+
+              <!-- ** Step 3-->
+              <div id="step-3" class="form-step d-none">
+                <h2>Takk for forespørsel! Jobben er sendt til godkjenning!</h2>
+                <p>
+                  Din forespørsel er mottatt. Vi vil ta kontakt med deg snart.
+                </p>
+                <button
+                  id="resetFormBtn"
+                  type="button"
+                  class="btn btn-secondary btn-lg mt-3"
+                >
+                  Start på nytt
+                </button>
+              </div>
+            </form>
+          </div>
+          <!-- ** End form -->
+
+          <!-- ** Column with image -->
+          <div class="col-lg-6 pt-5">
+            <img
+              src="src/assets/img/home/smile.jpg"
+              class="img-fluid rounded img-thumbnail"
+              alt="Responsive image"
+            />
+          </div>
         </div>
       </div>
-    </nav>
-  </header>
+    </main>
 
+    <!-- ** Start tjenester container-->
+    <div class="container-fluid bg-info-subtle text-black my-5 pt-3">
+      <div class="container text-center">
+        <h3 class="text-center my-4">
+          Vi tar på oss alle typer oppdrag:
+          <small class="text-body-secondary">finn inspirasjon</small>
+        </h3>
 
-
-<main class="container-fluid bg-body-tertiary my-5 pb-5" data-bs-theme="light">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6 text-black">
-        <h1 class="display-2 mt-5">Få jobben gjort!</h1>
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item active" id="breadcrumb-step-1">Beskrivelse</li>
-            <li class="breadcrumb-item" id="breadcrumb-step-2">Kontaktinfo</li>
-            <li class="breadcrumb-item" id="breadcrumb-step-3">Fullført</li>
-          </ol>
-        </nav>
-        <form class="mt-2" id="multiStepForm">
-  <!-- ** Step 1 -->
-
-          <div id="step-1" class="form-step">
-            <div class="mb-4">
-              <label for="overskrift" class="form-label mb-3">Beskriv jobben</label>
-              <textarea class="form-control" id="overskrift" rows="1" placeholder="Overskrift"></textarea>
-            </div>
-            <div class="mb-2">
-              <label for="description" class="form-label mb-3">"Hva trenger du hjelp til?"</label>
-              <textarea class="form-control" id="description" rows="6" placeholder="Beskrivelse"></textarea>
-            </div>
-            <div class="mb-2">
-              <label for="exampleDataList" class="form-label">Velg kategori</label>
-              <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
-              <datalist id="datalistOptions">
-                <option value="Oppusing"></option>
-                <option value="Kjøkken"></option>
-                <option value="Vindu"></option>
-                <option value="Fasade"></option>
-                <option value="Tak"></option>
-                <option value="Totalrenovering"></option>
-                <option value="Nybygg"></option>
-                <option value="Terrasse/Trapper"></option>
-                <option value="Bad"></option>
-                <option value="Dør"></option>
-                <option value="Kjeller"></option>
-                <option value="Bygging av vegger"></option>
-                <option value="Utvendig kledning"></option>
-                <option value="Bærekonstruksjon"></option>
-                <option value="Taktekking"></option>
-                <option value="Takvinduer"></option>
-                <option value="Innvendig kledning"></option>
-                <option value="Listverk"></option>
-                <option value="Golv"></option>
-                <option value="Terrasse"></option>
-                <option value="Våtrom"></option>
-                <option value="Anna/Diverse"></option>
-              </datalist>
-            </div>
-          
-            <button id="nextStep2" type="button" class="btn btn-primary btn-lg mt-3">Neste</button>
-
+        <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3 pb-5 pt-3">
+          <div class="col">
+            <h2 class="p-3">Oppussing</h2>
           </div>
-
-          <!-- ** Step 2 -->
-          <div id="step-2" class="form-step d-none">
-            <div class="mb-2">
-              <label for="email" class="form-label">E-post</label>
-              <input type="email" class="form-control" id="email" placeholder="E-post" required>
-            </div>
-            <div class="mb-2">
-              <label for="phone" class="form-label">Telefonnummer</label>
-              <input type="tel" class="form-control" id="phone" placeholder="+47 Telefonnummer" required>
-            </div>
-            <div class="mb-2">
-              <label for="firstName" class="form-label">Fornavn</label>
-              <input type="text" class="form-control" id="firstName" placeholder="Fornavn" required>
-            </div>
-            <div class="mb-2">
-              <label for="lastName" class="form-label">Etternavn</label>
-              <input type="text" class="form-control" id="lastName" placeholder="Etternavn" required>
-            </div>
-            <div class="mb-2">
-              <label for="address" class="form-label">Adresse</label>
-              <input type="text" class="form-control" id="address" placeholder="Adresse" required>
-            </div>
-            <div class="mb-2">
-              <label for="zipCode" class="form-label">Postnummer</label>
-              <input type="text" class="form-control" id="zipCode" placeholder="Postnummer" required>
-            </div>
-        
-            <button id="submitForm" type="submit" class="btn btn-primary btn-lg mt-3">Fullfør</button>
+          <div class="col">
+            <h2 class="p-3">Kjøkken</h2>
           </div>
-
-          <!--  ** Step 3-->
-
-          <div id="step-3" class="form-step d-none">
-            <h2>Takk for foresporsel!  Jobben er sendt til godkjening!</h2>
-            <p>Din forespørsel er mottatt. Vi vil ta kontakt med deg snart.</p>
-            <button id="resetFormBtn" type="button" class="btn btn-secondary btn-lg mt-3">Start på nytt</button>
+          <div class="col">
+            <h2 class="p-3">Vindu</h2>
           </div>
-        </form>
-      </div>
-  <div class="col-lg-6 pt-5">
-    <img src="src/assets/img/home/smile.jpg" class="img-fluid rounded img-thumbnail" alt="Responsive image">
-  </div>
-</div>
-</div>
-
-
-
-<div class="container-fluid bg-info-subtle text-black my-5 pt-3">
-  <div class="container text-center">
-
-
-    <h3 class="text-center my-4">
-      Vi tar på oss alle typer oppdrag:
-      <small class="text-body-secondary">finn inspirasjon</small>
-    </h3>
-
-    <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3 pb-5 pt-3">
-      <div class="col">
-        <h2 class="p-3">Oppusing</h2>
-      </div>
-      <div class="col">
-        <h2 class="p-3">Kjøkken</h2>
-      </div>
-      <div class="col">
-        <h2 class="p-3 ">Vindu</h2>
-      </div>
-      <div class="col">
-        <h2 class="p-3 ">Fasade</h2>
-      </div>
-      <div class="col">
-        <h2 class="p-3 ">Nybygg</h2>
-      </div>
-      <div class="col">
-        <h3 class="p-3 ">Totalrenovering</h3>
-      </div>
-      <div class="col ">
-        <h2 class="p-3 ">Terrasse</h2>
-      </div>
-      <div class="col ">
-        <h2 class="p-3 ">Bad</h2>
-      </div>
-      <div class="col">
-        <h2 class="p-3 ">Dør</h2>
-      </div>
-      <div class="col">
-        <h2 class="p-3 ">Kjeller</h2>
-      </div>
-      <div class="col">
-        <h3 class="p-3">Vegg</h3>
-      </div>
-      <div class="col">
-        <h3 class="p-3 ">Kledning</h3>
-      </div>
-      <div class="col">
-        <h3 class="p-3 ">Tak</h3>
-      </div>
-      <div class="col">
-        <h3 class="p-3 ">Isolasjon</h3>
-      </div>
-      <div class="col">
-        <h2 class="p-3 ">Listverk</h2>
-      </div>
-      <div class="col">
-        <h2 class="p-3 ">Golv</h2>
-      </div>
-      <div class="col">
-        <h2 class="p-3">Annet</a></h2>
-      </div>
-      <div class="col">
-        <h2 class="p-3">Tilbygg</h2>
-      </div>
-      <div class="col">
-        <h2 class="p-3">Etterisolering</h2>
-      </div>
-      <div class="col">
-        <h2 class="p-3 ">Garasje</h2>
+          <div class="col">
+            <h2 class="p-3">Fasade</h2>
+          </div>
+          <div class="col">
+            <h2 class="p-3">Nybygg</h2>
+          </div>
+          <div class="col">
+            <h3 class="p-3">Totalrenovering</h3>
+          </div>
+          <div class="col">
+            <h2 class="p-3">Terrasse</h2>
+          </div>
+          <div class="col">
+            <h2 class="p-3">Bad</h2>
+          </div>
+          <div class="col">
+            <h2 class="p-3">Dør</h2>
+          </div>
+          <div class="col">
+            <h2 class="p-3">Kjeller</h2>
+          </div>
+          <div class="col">
+            <h3 class="p-3">Vegg</h3>
+          </div>
+          <div class="col">
+            <h3 class="p-3">Kledning</h3>
+          </div>
+          <div class="col">
+            <h3 class="p-3">Tak</h3>
+          </div>
+          <div class="col">
+            <h3 class="p-3">Isolasjon</h3>
+          </div>
+          <div class="col">
+            <h2 class="p-3">Listverk</h2>
+          </div>
+          <div class="col">
+            <h2 class="p-3">Gulv</h2>
+          </div>
+          <div class="col">
+            <h2 class="p-3">Annet</h2>
+          </div>
+          <div class="col">
+            <h2 class="p-3">Tilbygg</h2>
+          </div>
+          <div class="col">
+            <h2 class="p-3">Etterisolering</h2>
+          </div>
+          <div class="col">
+            <h2 class="p-3">Garasje</h2>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
+    <!-- ** End tjenester container-->
 
-<div class="container-fluid m-auto">
-<div id="carouselExampleIndicators" class="carousel slide">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="/src/assets/img/tjenester/takk-simetrisk.jpg" class="d-block w-100 custom-img" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="/src/assets/img/tjenester/kjokken.png" class="d-block w-100 custom-img" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="/src/assets/img/tjenester/trapp-terase.png" class="d-block w-100 custom-img" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="/src/assets/img/tjenester/neringbygg.jpg" class="d-block w-100 custom-img" alt="...">
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-</div>
-</main>
-<hr class="featurette-divider">
+    <!-- FOOTER -->
+    <footer class="container pt-5">
+      <div class="d-flex flex-column align-items-center">
+        <p class="mb-1"><a href="#">Back to top</a></p>
+        <p class="mb-1">
+          &copy; 2025 Tømrer Drungilas &middot; <a href="#">Privacy</a> &middot;
+          <a href="#">Terms</a>
+        </p>
+        <p class="social">
+          Følg oss på:
+          <a
+            href="https://www.instagram.com/tomrerdrungilas/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+          >
+            <img
+              src="src/assets/img/socials/icons8-instagram-logo.svg"
+              alt="Instagram logo"
+              height="30px"
+            />
+          </a>
+        </p>
+      </div>
+    </footer>
 
-  <!-- FOOTER -->
-  <footer class="container pt-5">
-    <p class="float-end "><a href="#">Back to top</a></p>
-    <p>&copy; 2025 Tømrer Drungilas &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a> Følg oss på: <a href="https://www.instagram.com/tomrerdrungilas/" target="_blank">
-      <img src="src/assets/img/socials/icons8-instagram-logo.svg" alt="Instagram" height="30px">
-    </a></p>
-  
-  </footer>
-
-
-
-
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
-</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
