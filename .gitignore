@@ -9,7 +9,7 @@ package-lock.json
 .env
 
 # Build output
-/dist
+
 /build
 
 # IDEs or Editors (optional, based on your IDE)
