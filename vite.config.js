@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  base: '/github.com/ad-run/tomrer-drungilas/', // Change this to your actual GitHub repo name
+  base: '/tomrer-drungilas/', // Change this to your actual GitHub repo name
   build: {
     rollupOptions: {
       input: {
