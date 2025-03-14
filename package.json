@@ -9,6 +9,8 @@
     "server": "nodemon backend/server.js",
     "client": "vite",
     "build": "vite build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",   
     "watch-css": "sass --watch src/assets/css/styles.scss dist/assets/css/styles.css",
     "format": "prettier --write ."
   },
@@ -34,6 +36,7 @@
   },
   "devDependencies": {
     "concurrently": "^9.1.2",
+    "gh-pages": "^6.3.0",
     "nodemon": "^3.1.9",
     "prettier": "^3.2.5",
     "sass": "^1.85.1",
